@@ -1,0 +1,54 @@
+.footer {
+  background-color: $color-primary-footer;
+  padding: 10rem 0;
+  font-size: 2rem;
+  margin-top: -50vh;
+  color: $color-primary-gray;
+  &_logo-box {
+    margin-bottom: 8rem;
+  }
+
+  &_logo {
+    width: 15rem;
+    height: auto;
+
+  }
+
+  &_navigation {
+    border-top: 1px solid;
+    padding-top: 2rem;
+    display: inline-block;
+  }
+
+  &_list {
+    list-style: none;
+  }
+
+  &_item {
+
+    display: inline-block;
+    &:not(:last-child){
+    margin-right: 1.5rem;
+    }
+  }
+
+  &_link {
+    font-size: 2rem;
+    &:link,
+    &:visited{
+      color: $color-primary-gray;
+      text-decoration: none;
+    }
+    &:hover,
+    &:active{
+      color: $color-primary;
+      box-shadow: $box-shadow-standaard-pic
+    }
+  }
+  &_copyright{
+    font-size: 2rem;
+    border-top: 1px solid;
+    padding-top: 2rem;
+    display: inline-block;
+  }
+}

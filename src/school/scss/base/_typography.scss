@@ -1,8 +1,7 @@
-
 body {
   font-family: "lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: $default-font-size;
   line-height: 1.7;
   color: $color-primary-gray;
   padding: 2rem;
@@ -13,6 +12,7 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 8rem;
+
   &--main {
     display: block;
     font-size: 8rem;
@@ -21,12 +21,97 @@ body {
     animation-name: moveInLeft;
     animation-duration: 3s;
   }
+
   &--sub {
     display: block;
-    font-size: 2rem;
+    font-size: $default-font-size;
     font-weight: 700;
-    letter-spacing: 1.8rem;
+    letter-spacing: 1.7rem;
     animation-name: moveInRight;
     animation-duration: 3s;
+    transform: translateX($standart-animatie-heading-primary-sub)
   }
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgba($color-primary-one, 0.75),
+          rgba($color-primary-two, 0.75));
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .3s;
+
+  &:hover {
+    transform: skewY(3deg) skewX(4deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-primary-black, 5%);
+  }
+}
+
+.color-change {
+  color: $color-primary-white-light;
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+.composition_photo-two {
+  display: inline-block;
+  position: relative;
+  box-shadow: $box-shadow-standaard-pic;
+  width: 30%;
+  height: 50rem;
+  margin-bottom: 3rem;
+  margin-left: 4.5rem;
+  border-radius: 7rem;
+  transform: translate3d(0,0,0);
+  transition: transform 1s;
+
+
+  &:hover {
+    transform: rotateY(180deg);
+    box-shadow: 0 1rem 2rem rgba($color-primary-black, .4);
+    &::after {
+      transform: scaleX(1.6) scaleY(1.8);
+      opacity: 0;
+      -webkit-filter: blur(20px);
+      filter: blur(2px);
+    }
+  }
+}
+[class^="fotos-"]{
+  font-size: 5rem;
+  padding-left: 5%;
+  width: 30%;
+  padding-right: 8%;
+}
+
+.forum {
+  margin-top: 20rem;
+}
+.color-orange{
+  color: $color-primary;
+}
+p {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 10rem;
+}
+
+.gate-to-forum {
+  padding-bottom: 0;
+}
+
