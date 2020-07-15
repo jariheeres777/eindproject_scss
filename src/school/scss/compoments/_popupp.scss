@@ -1,0 +1,63 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-primary-black, .8);
+  z-index: 2500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+
+  &:target{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &_close{
+    &:link,
+    &:visited{
+      color: $color-primary-black;
+      position: absolute;
+      top:1rem;
+      right:1rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    &:hover{
+      color: $color-primary;
+    }
+  }
+
+
+  &_content {
+    @include center;
+    width: 75%;
+    height: 75%;
+    background-image: linear-gradient(to right, rgba($color-primary-one, 0.75),
+            rgba($color-primary-two, 0.75));
+    box-shadow: $box-shadow-standaard-pic;
+  }
+}
+
+.loginHeader {
+  text-transform: uppercase;
+  margin-top: 10rem;
+  color: $color-primary-black;
+}
+.create {
+  color: $color-primary;
+  margin-top: 3rem;
+}
+.login{
+  color: $color-primary;
+
+}
+.firstone{
+  padding-top: 10rem;
+}
+.text-login{
+  margin-bottom: 5rem;
+}
