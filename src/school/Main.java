@@ -1,4 +1,4 @@
-package school;
+package project;
 
 public class Main {
 

@@ -26,6 +26,23 @@
       top: 15rem;
     }
 
+    &--p10 {
+      top: 15rem;
+      height: 30rem;
+      width: 80rem;
+    }
+
+    &--p11 {
+      top: 10rem;
+      height: auto;
+      width: 80rem;
+    }
+
+    &--p12 {
+      top: 10rem;
+      height: auto;
+      width: 70rem;
+    }
     &:hover {
       outline: 1.5rem solid $color-primary;
       transform: scale(1.3) translateY(1rem);

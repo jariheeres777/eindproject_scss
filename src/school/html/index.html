@@ -16,27 +16,57 @@
 <body>
 <div class="navigation">
     <input type="checkbox" class="navigation_checkbox" id="navi-toggle">
-
     <label for="navi-toggle" class="navigation_button">
         <span class="navigation_icon">&nbsp;</span>
     </label>
-
     <div class="navigation_background">&nbsp;</div>
-
     <nav class="navigation_nav">
         <ul class="navigation_list">
-            <li class="navigation_item"><a href="#" class="navigation_link">login</a></li>
+            <li class="navigation_item"><a href="#popup" class="navigation_link">login</a></li>
             <li class="navigation_item"><a href="acount.html" class="navigation_link">account</a></li>
             <li class="navigation_item"><a href="forum.html" class="navigation_link">forum</a></li>
             <li class="navigation_item"><a href="lizards.html" class="navigation_link">lizard's</a></li>
-            <li class="navigation_item"><a href="tortoiseandturtle.html" class="navigation_link">tortoise and turtle</a></li>
-            <li class="navigation_item"><a href="alligatorAndCrocodile.html" class="navigation_link">alligator and crocodile</a></li>
-            <li class="navigation_item"><a href="constrictionSnakes.html" class="navigation_link">Constriction snakes</a></li>
+            <li class="navigation_item"><a href="tortoiseandturtle.html" class="navigation_link">tortoise and turtle</a>
+            </li>
+            <li class="navigation_item"><a href="alligatorAndCrocodile.html" class="navigation_link">alligator and
+                crocodile</a></li>
+            <li class="navigation_item"><a href="constrictionSnakes.html" class="navigation_link">constrictor snakes</a>
+            </li>
             <li class="navigation_item"><a href="venomous-Snakes.html" class="navigation_link">Venomous-Snakes</a></li>
             <li class="navigation_item"><a href="tarantula's.html" class="navigation_link">tarantula's</a></li>
         </ul>
     </nav>
-
+</div>
+<div class="popup" id="popup">
+    <div class="popup_content">
+        <div class="row">
+            <div class="col-1-of-2">
+                <h2 class="loginHeader">login</h2>
+                <div class="login firstone">username/email</div>
+                <input class="text-login" type="text">
+                <div class="login">wachtwoord</div>
+                <input class="text-login" type="password">
+                <br>
+                <button>comfirm</button>
+            </div>
+            <div class="col-1-of-2">
+                <a href="#index.html" class="popup_close">&times;</a>
+                <h2 class="loginHeader">create an account</h2>
+                <div class="create">username</div>
+                <input class="text-username" type="text">
+                <div class="create">email</div>
+                <input class="text-username" type="email">
+                <div class="create">date of birth</div>
+                <input class="text-username" type="date">
+                <div class="create">password</div>
+                <input class="text-username" type="password">
+                <div class="create">confirm password</div>
+                <input class="text-username" type="password">
+                <br>
+                <button>confirm</button>
+            </div>
+        </div>
+    </div>
 </div>
 <header class="header mainpage">
     <div class="header__logo-box">
@@ -63,7 +93,7 @@
                 <h3 class="heading-tertiary u-margine-bottom-small">why uss?</h3>
                 <p class="paragraph color-orange">
                     the exotics forum is a modern platform for reptile enthusiasts from all over the world to share
-                    skills, knowledge, and interests.
+                    skills, knowledge, and interests.<br>
                     its a great place for experts and beginners for there first animal or ther tenth animal.
                 </p>
                 <h3 class="heading-tertiary u-margine-bottom-small">our story</h3>
@@ -73,12 +103,12 @@
                 </p>
             </div>
             <div class="col-1-of-2">
-                    <div class="composition">
-                        <img src="../..//img/schildpad_paardenbloem.jpg" alt="photo 1"
-                             class="composition_photo composition_photo--p1">
-                        <img src="../..//img/groene%20boompython.jpg" alt="photo 2"
-                             class="composition_photo composition_photo--p2">
-                        <img src="../..//img/kameleon1.jpg" alt="photo 3" class="composition_photo composition_photo--p3">
+                <div class="composition">
+                    <img src="../..//img/schildpad_paardenbloem.jpg" alt="photo 1"
+                         class="composition_photo composition_photo--p1">
+                    <img src="../..//img/groene%20boompython.jpg" alt="photo 2"
+                         class="composition_photo composition_photo--p2">
+                    <img src="../..//img/kameleon1.jpg" alt="photo 3" class="composition_photo composition_photo--p3">
                 </div>
             </div>
         </div>
@@ -94,21 +124,22 @@
             <span class="fotos-two">alligator and crocodile</span>
             <span class="fotos-three">lizard's</span>
             <a href="tortoiseandturtle.html"><img src="../..//img/Green_turtle_swimming.jpg" alt="photo 4"
-                            class="composition_photo-two composition_photo--p4"></a>
+                                                  class="composition_photo-two composition_photo--p4"></a>
             <a href="alligatorAndCrocodile.html"><img src="../..//img/Crocodylus2.jpg" alt="photo 5"
-                            class="composition_photo-two composition_photo--p5"></a>
+                                                      class="composition_photo-two composition_photo--p5"></a>
             <a href="lizards.html"><img src="../..//img/moloch_close_up_-_christopher_watson.jpg" alt="photo 6"
-                            class="composition_photo-two composition_photo--p6"></a>
-            <span class="fotos-one">Constriction snakes</span>
+                                        class="composition_photo-two composition_photo--p6"></a>
+            <span class="fotos-one">constrictor snakes</span>
             <span class="fotos-two">Venomous-Snakes</span>
             <span class="fotos-three">tarantula's</span>
             <a href="constrictionSnakes.html"><img src="../../img/netpython740x433.jpg" alt="photo 7"
-                            class="composition_photo-two composition_photo--p7"></a>
-            <a href="venomous-Snakes.html"><img src="../../img/blue-viper-venomous-poisonous-snake-Venomous-Snakes-ss-Featured.jpg"
-                            alt="photo 8"
-                            class="composition_photo-two composition_photo--p8"></a>
+                                                   class="composition_photo-two composition_photo--p7"></a>
+            <a href="venomous-Snakes.html"><img
+                    src="../../img/blue-viper-venomous-poisonous-snake-Venomous-Snakes-ss-Featured.jpg"
+                    alt="photo 8"
+                    class="composition_photo-two composition_photo--p8"></a>
             <a href="tarantula's.html"><img src="../../img/1200px-Grammostola_pulchra_(aka).jpg"
-                            alt="photo 9" class="composition_photo-two composition_photo--p9"></a>
+                                            alt="photo 9" class="composition_photo-two composition_photo--p9"></a>
         </div>
         </div>
     </section>
@@ -146,7 +177,7 @@
         </div>
         <div class="row col-1-of-2">
             <p class="footer_copyright">
-                built by <a href="#" class="footer_link">jariheeres</a>
+                built by <a href="index.html" class="footer_link">jariheeres</a>
             </p>
         </div>
     </div>
