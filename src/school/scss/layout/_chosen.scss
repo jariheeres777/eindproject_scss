@@ -1,0 +1,20 @@
+.paragraph {
+  font-size: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+.color-change {
+  color: $color-primary-white-light;
+}
+.composition_photo-two {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 3rem;
+  margin-left: 4.5rem;
+  border-radius: 7rem;
+  box-shadow: $box-shadow-standaard-pic;
+  width: 30%;
+  height: 50rem;
+}

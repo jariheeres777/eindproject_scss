@@ -16,65 +16,69 @@
 <body>
 <div class="navigation">
     <input type="checkbox" class="navigation_checkbox" id="navi-toggle">
-
     <label for="navi-toggle" class="navigation_button">
         <span class="navigation_icon">&nbsp;</span>
     </label>
-
     <div class="navigation_background">&nbsp;</div>
-
     <nav class="navigation_nav">
         <ul class="navigation_list">
-            <li class="navigation_item"><a href="#" class="navigation_link">login</a></li>
+            <li class="navigation_item"><a href="#popup" class="navigation_link">login</a></li>
             <li class="navigation_item"><a href="acount.html" class="navigation_link">account</a></li>
             <li class="navigation_item"><a href="forum.html" class="navigation_link">forum</a></li>
             <li class="navigation_item"><a href="lizards.html" class="navigation_link">lizard's</a></li>
-            <li class="navigation_item"><a href="tortoiseandturtle.html" class="navigation_link">tortoise and turtle</a></li>
-            <li class="navigation_item"><a href="alligatorAndCrocodile.html" class="navigation_link">alligator and crocodile</a></li>
-            <li class="navigation_item"><a href="constrictionSnakes.html" class="navigation_link">constrictor snakes</a></li>
+            <li class="navigation_item"><a href="tortoiseandturtle.html" class="navigation_link">tortoise and turtle</a>
+            </li>
+            <li class="navigation_item"><a href="alligatorAndCrocodile.html" class="navigation_link">alligator and
+                crocodile</a></li>
+            <li class="navigation_item"><a href="constrictionSnakes.html" class="navigation_link">constrictor snakes</a>
+            </li>
             <li class="navigation_item"><a href="venomous-Snakes.html" class="navigation_link">Venomous-Snakes</a></li>
             <li class="navigation_item"><a href="tarantula's.html" class="navigation_link">tarantula's</a></li>
         </ul>
     </nav>
 </div>
-    <header class="header">
-        <div class="header__logo-box">
-            <a href="index.html"><img src="../../img/cobralogo.png" alt="logo" class="header__logo"></a>
-        </div>
-        <div class="header__text-box">
-            <h1 class="heading-primary">
-                <span class="heading-primary--main">exotics</span>
-                <span class="heading-primary--sub">Find your next exotic</span>
-            </h1>
-            <a href="https://www.youtube.com/channel/UCH18915fTE6yZzKrqdea8RQ" class="btn btn--white btn--animation"
-               target="_blank">guides to help you choose</a>
-        </div>
-    </header>
-<main class="">
-
-</main>
-<footer class="footer">
-    <div class="footer_logo-box u-center-text">
-        <a href=""><img src="../../img/cobralogo.png" alt="logo" class="header__logo"></a>
-    </div>
-    <div class="row">
-        <div class="col-1-of-2">
-            <div class="footer_navigation">
-                <ul class="footer_list">
-                    <li class="footer_item"><a href="#" class="footer_link">Company</a></li>
-                    <li class="footer_item"><a href="#" class="footer_link">Contact us</a></li>
-                    <li class="footer_item"><a href="#" class="footer_link">Carreers</a></li>
-                    <li class="footer_item"><a href="#" class="footer_link">Privacy policy</a></li>
-                    <li class="footer_item"><a href="#" class="footer_link">Terms</a></li>
-                </ul>
+<div class="popup" id="popup">
+    <div class="popup_content">
+        <div class="row">
+            <div class="col-1-of-2">
+                <h2 class="loginHeader">login</h2>
+                <div class="login firstone">username/email</div>
+                <input class="text-login" type="text">
+                <div class="login">wachtwoord</div>
+                <input class="text-login" type="password">
+                <br>
+                <button>comfirm</button>
+            </div>
+            <div class="col-1-of-2">
+                <a href="#index.html" class="popup_close">&times;</a>
+                <h2 class="loginHeader">create an account</h2>
+                <div class="create">username</div>
+                <input class="text-username" type="text">
+                <div class="create">email</div>
+                <input class="text-username" type="email">
+                <div class="create">date of birth</div>
+                <input class="text-username" type="date">
+                <div class="create">password</div>
+                <input class="text-username" type="password">
+                <div class="create">confirm password</div>
+                <input class="text-username" type="password">
+                <br>
+                <button>confirm</button>
             </div>
         </div>
-        <div class="row col-1-of-2">
-            <p class="footer_copyright">
-                built by <a href="index.html" class="footer_link">jariheeres</a>
-            </p>
-        </div>
     </div>
-</footer>
+</div>
+<main>
+    <div class="sidebar">
+        <h1>Account</h1>
+        <a href="index.html">Home</a>
+        <a href="">private massages</a>
+        <a href="">offers</a>
+        <a href="">bid</a>
+        <a href="">saved ads</a>
+        <a href="">manage ads</a>
+        <a href="">change info</a>
+    </div>
+</main>
 </body>
 </html>

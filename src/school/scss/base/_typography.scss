@@ -11,11 +11,11 @@ body {
   color: $color-primary;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 8rem;
+  margin-bottom: $margin-bottom-standaard;
 
   &--main {
     display: block;
-    font-size: 8rem;
+    font-size: $margin-bottom-standaard;
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation-name: moveInLeft;
@@ -50,46 +50,18 @@ body {
     text-shadow: .5rem 1rem 2rem rgba($color-primary-black, 5%);
   }
 }
-
-.color-change {
-  color: $color-primary-white-light;
-}
-
 .heading-tertiary {
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
 }
-
-.paragraph {
-  font-size: 2rem;
-
-  &:not(:last-child) {
-    margin-bottom: 3rem;
-  }
-}
 .composition_photo-two {
-  display: inline-block;
-  position: relative;
-  box-shadow: $box-shadow-standaard-pic;
-  width: 30%;
-  height: 50rem;
-  margin-bottom: 3rem;
-  margin-left: 4.5rem;
-  border-radius: 7rem;
   transform: translate3d(0,0,0);
   transition: transform 1s;
-
 
   &:hover {
     transform: rotateY(180deg);
     box-shadow: 0 1rem 2rem rgba($color-primary-black, .4);
-    &::after {
-      transform: scaleX(1.6) scaleY(1.8);
-      opacity: 0;
-      -webkit-filter: blur(20px);
-      filter: blur(2px);
-    }
   }
 }
 [class^="fotos-"]{

@@ -1,5 +1,4 @@
 //abstact folder
-@import "abstract/functions";
 @import "abstract/mixins";
 @import "abstract/varibles";
 //base folder
@@ -12,10 +11,11 @@
 @import "compoments/composition";
 @import "compoments/popupp";
 //layout folder
+@import "layout/account";
+@import "layout/chosen";
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/navigation";
-
 //pages folder
 @import "pages/home";
