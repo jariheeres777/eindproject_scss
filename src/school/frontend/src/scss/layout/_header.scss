@@ -1,0 +1,68 @@
+.header {
+  height: 95vh;
+  background-size: cover;
+
+  &__logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  &__logo {
+    height: 15rem;
+  }
+
+  &__text-box {
+    @include center;
+  }
+}
+
+.mainpage {
+  background-image: linear-gradient(to right bottom, rgba($color-primary-one, 0.75),
+          rgba($color-primary-two, 0.75)), url(../../src/assets/krokodilenslang2.png);
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.lizardsPage{
+  background-image: linear-gradient(to right bottom, rgba($color-primary-one, 0.75),
+          rgba($color-primary-two, 0.75)), url(../../src/assets/zwart-witte-argentijnse-teju-29558350.jpg);
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.turtlepage{
+  background-image: linear-gradient(to right bottom, rgba($color-primary-one, 0.75),
+          rgba($color-primary-two, 0.75)), url(../../src/assets/Tortoise.jpg);
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.aligatorPage{
+  background-image: linear-gradient(to right bottom, rgba($color-primary-one, 0.75),
+          rgba($color-primary-two, 0.75)), url(../../src/assets/crocodile.jpg);
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.constrictorPage{
+  background-image: linear-gradient(to right bottom, rgba($color-primary-one, 0.75),
+          rgba($color-primary-two, 0.75)), url(../../src/assets/koningspython-albino-5.jpg);
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.venomPage{
+  background-image: linear-gradient(to right bottom, rgba($color-primary-one, 0.75),
+          rgba($color-primary-two, 0.75)), url(../../src/assets/JUSTZGB_TEMPLATE-1.png);
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.tarantulaPage{
+  background-image: linear-gradient(to right bottom, rgba($color-primary-one, 0.75),
+          rgba($color-primary-two, 0.75)), url(../../src/assets/merlin_152790678_610c924a-0dfe-41d2-95d2-589139b948cb-articleLarge.jpg);
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
