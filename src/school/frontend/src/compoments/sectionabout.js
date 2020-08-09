@@ -1,15 +1,11 @@
 import React from "react";
-import nav from "./navigation";
-import foto1 from '../assets/schildpad_paardenbloem.jpg'
-import foto2 from '../assets/groene boompython.jpg'
-import foto3 from '../assets/kameleon1.jpg'
 
 function sectionabout(props) {
     return <div>
         <section className="section-about">
             <div className="u-center-text u-margine-bottom-big">
                 <h2 className="heading-secondary">
-                    our goals as a website
+                    {props.headertext}
                 </h2>
             </div>
             <div className="row">
@@ -25,13 +21,14 @@ function sectionabout(props) {
                 </div>
                 <div className="col-1-of-2">
                     <div className="composition">
-                        <img src={foto1} alt="photo 1" className="composition_photo composition_photo--p1"/>
-                        <img src={foto2} alt="photo 2" className="composition_photo composition_photo--p2"/>
-                        <img src={foto3} alt="photo 3" className="composition_photo composition_photo--p3"/>
+                        <img src={props.foto1} alt='' className={props.classfoto1}/>
+                        <img src={props.foto2} alt='' className={props.classfoto2}/>
+                        <img src={props.foto3} alt='' className={props.classfoto3}/>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 }
+
 export default sectionabout;

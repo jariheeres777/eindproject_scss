@@ -1,5 +1,5 @@
 import React from "react";
-import "../index.css"
+
 import foto1 from "../assets/cobralogo.png"
 import {Link} from 'react-router-dom';
 function header(props){
@@ -14,8 +14,8 @@ function header(props){
                     <span className="heading-primary--sub">{props.line}</span>
                 </h1>
                 <Link to="https://www.youtube.com/channel/UCH18915fTE6yZzKrqdea8RQ"
-                      className="btn btn--white btn--animation"
-                      target="_blank">guides to help you choose</Link>
+                      className={props.button}
+                      target="_blank">{props.buttontext}</Link>
             </div>
         </header>
     </div>

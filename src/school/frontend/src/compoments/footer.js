@@ -1,10 +1,11 @@
 import React from "react";
-import "../index.css"
+
 import logosite from '../assets/cobralogo.png'
 import {Link} from 'react-router-dom';
 
 const footer = () => {
     return <div>
+        <footer className="footer">
         <div className="footer_logo-box u-center-text">
             <Link href="/"><img src={logosite} alt="logo" className="header__logo"/></Link>
         </div>
@@ -18,39 +19,21 @@ const footer = () => {
                                 className="footer_link" target="_blank">Company
                             </Link>
                         </li>
-                        <li className="footer_item">
-                            <Link
-                                to=""
-                                className="footer_link" target="_blank">Contact us
-                            </Link>
-                        </li>
-                        <li className="footer_item">
-                            <Link
-                                to=""
-                                className="footer_link" target="_blank">Carreers
-                            </Link>
-                        </li>
-                        <li className="footer_item">
-                            <Link
-                                to=""
-                                className="footer_link" target="_blank">Privacy policy
-                            </Link>
-                        </li>
-                        <li className="footer_item">
-                            <Link
-                                to=""
-                                className="footer_link" target="_blank">Terms
-                            </Link>
+                        <li className="footer_item"><Link to=" " className="footer_link" >Contact us</Link></li>
+                        <li className="footer_item"><Link to="" className="footer_link" >Carreers</Link></li>
+                        <li className="footer_item"><Link to="" className="footer_link">Privacy policy</Link></li>
+                        <li className="footer_item"><Link to="" className="footer_link" >Terms</Link>
                         </li>
                     </ul>
                 </div>
             </div>
             <div className="row col-1-of-2">
                 <p className="footer_copyright">
-                    built by <Link to="/" className="footer_link">jariheeres</Link>
+                    built by <Link to="" className="footer_link">jariheeres</Link>
                 </p>
             </div>
         </div>
+        </footer>
     </div>
 };
 
