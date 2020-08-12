@@ -1,13 +1,14 @@
 import React from "react";
-
 import logosite from '../assets/cobralogo.png'
 import {Link} from 'react-router-dom';
 
+
 const footer = () => {
-    return <div>
+    return (
+    <div>
         <footer className="footer">
         <div className="footer_logo-box u-center-text">
-            <Link href="/"><img src={logosite} alt="logo" className="header__logo"/></Link>
+            <a href="#top"><img src={logosite} alt="logo" className="header__logo"/></a>
         </div>
         <div className="row">
             <div className="col-1-of-2">
@@ -19,7 +20,7 @@ const footer = () => {
                                 className="footer_link" target="_blank">Company
                             </Link>
                         </li>
-                        <li className="footer_item"><Link to=" " className="footer_link" >Contact us</Link></li>
+                        <li className="footer_item"><Link to="" className="footer_link" >Contact us</Link></li>
                         <li className="footer_item"><Link to="" className="footer_link" >Carreers</Link></li>
                         <li className="footer_item"><Link to="" className="footer_link">Privacy policy</Link></li>
                         <li className="footer_item"><Link to="" className="footer_link" >Terms</Link>
@@ -35,6 +36,7 @@ const footer = () => {
         </div>
         </footer>
     </div>
+    );
 };
 
 export default footer;

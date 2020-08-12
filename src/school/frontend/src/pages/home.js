@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import Header from '../compoments/header'
+import Header from '../compoments/Header'
 import foto10 from '../assets/Knipsel.PNG'
 import foto4 from '../assets/Green_turtle_swimming.jpg'
 import foto5 from '../assets/Crocodylus2.jpg'
@@ -8,9 +8,9 @@ import foto6 from '../assets/moloch_close_up_-_christopher_watson.jpg'
 import foto7 from '../assets/netpython740x433.jpg'
 import foto8 from '../assets/blue-viper-venomous-poisonous-snake-Venomous-Snakes-ss-Featured.jpg'
 import foto9 from '../assets/1200px-Grammostola_pulchra_(aka).jpg'
-import Nav from "../compoments/navigation";
-import Sectionabout from "../compoments/sectionabout"
-import Footer from "../compoments/footer"
+import Nav from "../compoments/Navigation";
+import Sectionabout from "../compoments/Sectionabout"
+import Footer from "../compoments/Footer"
 import foto1 from '../assets/schildpad_paardenbloem.jpg'
 import foto2 from '../assets/groene boompython.jpg'
 import foto3 from '../assets/kameleon1.jpg'

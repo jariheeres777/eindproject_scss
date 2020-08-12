@@ -261,6 +261,17 @@ p {
 .text-login {
   margin-bottom: 5rem; }
 
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  color: #ff9900;
+  border: 0 !important;
+  background-image: none; }
+
 .sidebar {
   position: fixed;
   width: 25rem;
@@ -282,18 +293,21 @@ p {
   font-size: 2.5rem;
   text-transform: uppercase; }
 
-.sidebar a {
+.sidebar button {
   display: block;
   padding: 1rem 2rem;
+  background: #000000;
   color: #777;
   text-decoration: none;
   font-weight: 900;
-  letter-spacing: .2rem; }
+  letter-spacing: .2rem;
+  text-decoration: none; }
 
-.sidebar a:hover {
+.sidebar button:hover {
   color: #ff9900;
   margin-left: 2rem;
-  transition: 0.4s; }
+  transition: 0.4s;
+  text-decoration: none; }
 
 .paragraph {
   font-size: 2rem; }

@@ -1,11 +1,9 @@
 import React from "react";
-import Nav from "../compoments/navigation";
-import Header from "../compoments/header";
-import Sectionabout from "../compoments/sectionabout";
-import Footer from "../compoments/footer";
+import Nav from "../compoments/Navigation";
+import Header from "../compoments/Header";
+import Sectionabout from "../compoments/Sectionabout";
+import Footer from "../compoments/Footer";
 import foto10 from "../assets/aligator - crocodile.jpg";
-
-
 
 const alligatorAndCrocodilepage = () =>{
     return (
@@ -24,15 +22,7 @@ const alligatorAndCrocodilepage = () =>{
             />
             <Footer/>
         </div>
-
     );
-    //navigation
-
-    //header
-
-    //
-
-
 };
 
 export default alligatorAndCrocodilepage;

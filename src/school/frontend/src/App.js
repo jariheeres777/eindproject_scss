@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollToTop from './compoments/ScrollToTop';
 import {
     BrowserRouter as Router,
     Switch,
@@ -20,6 +21,7 @@ import './css/style.css';
 function App() {
         return (
             <Router>
+                <ScrollToTop/>
                 <Switch>
                     <Route exact path="/">
                         <Homepage />
