@@ -1,16 +1,16 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import Nav from "../compoments/Navigation";
-import Changeinfo from "../compoments/Changeinfo";
-import Privatemessege from "../compoments/Privatemessage"
-import Bidinfo from "../compoments/BidInfo"
-import Savedads from "../compoments/SavedAds"
-import Offersinfo from "../compoments/Offersinfo"
-import Manageads from "../compoments/ManageAds"
+import Changeinfo from "../compoments/AccountCompoments/Changeinfo";
+import Privatemessege from "../compoments/AccountCompoments/Privatemessage"
+import Bidinfo from "../compoments/AccountCompoments/BidInfo"
+import Savedads from "../compoments/AccountCompoments/SavedAds"
+import Offersinfo from "../compoments/AccountCompoments/Offersinfo"
+import Manageads from "../compoments/AccountCompoments/ManageAds"
 
 const pages = {
     changeInfo:"change-info",
-    privateMessege:"private-message-info",
+    privateMessage:"private-message-info",
     bidInfo:"bid-info",
     offers:"offers-info",
     savedAds:"saved-ads",
@@ -18,7 +18,7 @@ const pages = {
 }
 
 function Accountpage() {
-    const [activepage, setActivepage] = React.useState()
+    const [activepage, setActivepage] = React.useState(pages.changeInfo)
     function handleClick(event) {
         event.preventDefault();
         alert('your logout');
@@ -27,7 +27,7 @@ function Accountpage() {
     return (
         <div>
             <Nav/>
-            {activepage === pages.privateMessege && <Privatemessege/>}
+            {activepage === pages.privateMessage && <Privatemessege/>}
             {activepage === pages.offers && <Offersinfo/>}
             {activepage === pages.bidInfo && <Bidinfo/>}
             {activepage === pages.savedAds && <Savedads/>}
@@ -36,7 +36,7 @@ function Accountpage() {
             <div className="sidebar">
                 <h1>Account</h1>
                 <Link to="/" style={{textDecoration: 'none'}}><button>Home</button></Link>
-                <button onClick={() => setActivepage(pages.privateMessege)}>Private message</button>
+                <button onClick={() => setActivepage(pages.privateMessage)}>Private message</button>
                 <button onClick={() => setActivepage(pages.offers)}>Offers</button>
                 <button onClick={() => setActivepage(pages.bidInfo)}>Bid</button>
                 <button onClick={() => setActivepage(pages.savedAds)}>Saved ads</button>

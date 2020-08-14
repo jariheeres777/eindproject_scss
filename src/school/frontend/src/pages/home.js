@@ -15,7 +15,7 @@ import foto1 from '../assets/schildpad_paardenbloem.jpg'
 import foto2 from '../assets/groene boompython.jpg'
 import foto3 from '../assets/kameleon1.jpg'
 
-const homepage = () => {
+const Homepage = () => {
 
     return (
         <div>
@@ -83,4 +83,4 @@ const homepage = () => {
     );
 }
 
-export default homepage;
+export default Homepage;

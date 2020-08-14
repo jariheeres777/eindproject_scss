@@ -1,11 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import Nav from "../compoments/Navigation";
 import Header from "../compoments/Header";
 import Sectionabout from "../compoments/Sectionabout";
 import Footer from "../compoments/Footer";
 import foto11 from "../assets/komodovaraan.jpg";
+import Sectionspecies from "../compoments/Sectionspecies";
 
-const lizardspage = () =>{
+const Lizardspage = () =>{
+    const [animalInfo, setAnimalInfo] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, toggleLoading] = useState(false);
+    useEffect(() => {
+        const fetchData = async () => {
+            toggleLoading(true);
+            try {
+                const result = await axios.get('/api/animalinfo/lizards');
+                // we zetten alleen het result object erin, want meer hebben we niet nodig
+                setAnimalInfo(result.data.results);
+                toggleLoading(false);
+            } catch(error) {
+                setError(error);
+                toggleLoading(false);
+            }
+        }
+        // we hebben de functie hierboven beschreven, vergeet niet om fetchData ook nog aan te roepen!
+        fetchData();
+    }, []);
+
     return (
         <div>
             <Nav/>
@@ -22,9 +43,24 @@ const lizardspage = () =>{
                     animals like teju's."
                           foto1={foto11} classfoto1='composition_photo  composition_photo--p11'
             />
+            <>
+                {error !== null && <p>Er is iets misgegaan: {error}</p>}
+                {loading === true && <p>Loading...</p>}
+
+                <div className="container">
+                    {/* we mappen over de pokemonlijst heen zodat er 20 Pokemon Componenten worden weergegeven */}
+                    {animalInfo !== null && animalInfo.map(entry => {
+                        return (
+                            <Sectionspecies
+                                url={entry.url}
+                            />
+                        );
+                    })}
+                </div>
+            </>
             <Footer/>
         </div>
     );
 };
 
-export default lizardspage;
+export default Lizardspage;

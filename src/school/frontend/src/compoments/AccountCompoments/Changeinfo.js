@@ -1,29 +1,31 @@
-import React,{useState} from "react";
-import {PluginObj as axios} from "@babel/core";
+import React, {useState} from "react";
+import axios from "axios"
 
 const Changeinfo = () => {
-    const [animalName, setAnimalName] = useState();
     const [animalSpecies, setAnimalSpecies] = useState();
-    const [animalInformation,setAnimalInformation]= useState()
-    const [animalPicture,setAnimalPicture]=useState()
+    const [animalName, setAnimalName] = useState();
+    const [animalInformation, setAnimalInformation] = useState()
+    const [animalPicture, setAnimalPicture] = useState()
+    const base64 = btoa(animalPicture)
     const handleSubmit = async (event) => {
         event.preventDefault() // om te voorkomen dat de pagina ververst
         try {
-            const result = await axios.post('/api/........', {
+            const result = await axios.post('/api/animalinfo', {
+                species: animalSpecies,
                 animal: animalName,
-                andereWaarde: null,
-                return:alert('files are saved'),
+                info: animalInformation,
+                picture: base64
             })
-        } catch(error) {
+        } catch (error) {
             console.error(error);
         }
     }
 
     return (
-        <div className="u-center-text section-about">
-            <label htmlFor="soorten">Choose the specie<br/>
+        <div defaultValue className="u-center-text section-about color-orange ">
+            <label htmlFor="soorten"><h2>Choose the specie</h2><br/>
                 <div>
-                    <select className="format select" id="format" value={animalSpecies}
+                    <select className="select-css" id="format" value={animalSpecies}
                             onChange={(event) => setAnimalSpecies(event.target.value)}>
                         <option disabled selected value> -- select an option --</option>
                         <option value="alligatorandCrocodiles">alligator and Crocodile's</option>
@@ -35,22 +37,22 @@ const Changeinfo = () => {
                     </select><br/><br/>
                 </div>
             </label>
-            <label>put in the name of the animal<br/>
+            <label><h2>put in the name of the animal</h2><br/>
                 <input placeholder="typ your message"
                        className="text-login"
                        type="text"
                        value={animalName}
                        onChange={(event) => setAnimalName(event.target.value)}/><br/>
             </label>
-            <label>put in the image of the animal<br/>
+            <label><h2>put in the image of the animal</h2><br/>
                 <input type="file" id="img" name="img" accept="image/*" value={animalPicture}
-                       onChange={(event) => setAnimalPicture(event.target.value)}></input><br/><br/>
-            </label>
-            <label>put in information about<br/>
-                <textarea rows="4" cols="50" className="some-info" type="text"
+                       onChange={(event) => setAnimalPicture(event.target.value)}/>
+            </label><br/><br/>
+            <label><h2>put in information about</h2><br/>
+                <textarea rows="4" cols="50" className="some-info"
                           value={animalInformation}
-                          onChange={(event) => setAnimalInformation(event.target.value)}/><br/>
-            </label>
+                          onChange={(event) => setAnimalInformation(event.target.value)}/>
+            </label><br/>
             <button className="btn" onClick={handleSubmit}>confirm</button>
         </div>
     );
