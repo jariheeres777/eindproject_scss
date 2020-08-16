@@ -1,5 +1,6 @@
 # eindproject_scss
 start of my project in css &amp;scss
+
 Dit is eindopdracht voor de bootcamp fullstack-developer van (startdatum) 11 mei 2020.
 
 Deze bootcamp is de kans om me te laten omscholen naar een IT functie doormiddel van een HBO functie certificaat.
