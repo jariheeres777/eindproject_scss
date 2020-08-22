@@ -7,11 +7,13 @@ import Lizardspage from "./lizards"
 import Tarantulaspage from "./tarantulas"
 import Tortoiseandturtlepage from "./tortoiseandturtle"
 import Venomoussnakespage from "./venomoussnakes"
+import Loginpage from "./Loginpage"
 
 export {
     Accountpage,
     AlligatorAndCrocodilepage,
     ConstrictionSnakespage,
+    Loginpage,
     Forumpage,
     Homepage,
     Lizardspage,

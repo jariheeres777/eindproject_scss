@@ -44,8 +44,8 @@ const Homepage = () => {
                     <Link to="/tortoiseandturtlepage"><img src={foto4} alt="photo4"
                                                            className="composition_photo-two composition_photo--p4"/>
                     </Link>
-                    <Link to="/alligatorAndCrocodilepage"><img src={foto5} alt="photo5"
-                                                               className="composition_photo-two composition_photo--p5"/>
+                    <Link to="/alligatorAndCrocodilepage">
+                        <img src={foto5} alt="photo5" className="composition_photo-two composition_photo--p5"/>
                     </Link>
                     <Link to="/lizardspage"><img src={foto6} alt="photo6"
                                                  className="composition_photo-two composition_photo--p6"/></Link>

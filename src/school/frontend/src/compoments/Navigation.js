@@ -1,40 +1,8 @@
 import React, {useState} from "react";
 import {Link} from 'react-router-dom';
-import axios from "axios";
 
 
 const Nav = () => {
-    const [usernameInlog, setusernameInlog] = useState()
-    const [passwordInlog, setpasswordInlog] = useState()
-    const handleInlog= async (event) => {
-        event.preventDefault() // om te voorkomen dat de pagina ververst
-        try {
-            const result = await axios.post('/api/auth/signin', {
-                username: username,
-                password: password
-            })
-        } catch (error) {
-            console.error(error);
-        }
-    }
-    const [username, setUsername] = useState();
-    const [email, setemail] = useState();
-    const [birthdate, setbirthdate] = useState()
-    const [password, setpassword] = useState()
-    const handleSubmit = async (event) => {
-        event.preventDefault() // om te voorkomen dat de pagina ververst
-        try {
-            const result = await axios.post('/api/auth/signup', {
-                username: username,
-                email: email,
-                birthdate: birthdate,
-                password: password
-            })
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
     return (
         <div>
             <input type="checkbox" className="navigation_checkbox" id="navi-toggle"/>
@@ -45,10 +13,14 @@ const Nav = () => {
             <nav className="navigation_nav">
                 <ul className="navigation_list">
                     <li className="navigation_item"><a href="/" className="navigation_link">Home</a></li>
-                    <li className="navigation_item"><a href="#popup" className="navigation_link">login</a></li>
-                    <li className="navigation_item"><Link to="/accountpage"
-                                                          className="navigation_link">account</Link>
-                    </li>
+                    {/*zorgt er voor dat je inlog knop niet ziet als je niet ingelogd bent*/}
+                    {sessionStorage.token === undefined &&
+                    <li className="navigation_item"><a href="/loginpage" className="navigation_link">login</a></li>}
+                    {/*zorgt er voor dat je dit alleen ziet als je ingelogd bent*/}
+                    {sessionStorage.token !== undefined &&
+                    <li className="navigation_item"><Link to="/accountpage" className="navigation_link">account</Link>
+                    </li>}
+
                     <li className="navigation_item"><Link to="/forumpage" className="navigation_link">forum</Link>
                     </li>
                     <li className="navigation_item"><Link to="/lizardspage"
@@ -69,44 +41,6 @@ const Nav = () => {
                                                           className="navigation_link">tarantula's</Link></li>
                 </ul>
             </nav>
-            <div className="popup" id="popup">
-                <div className="popup_content">
-                    <div className="row">
-                        <div className="col-1-of-2">
-                            <h2 className="loginHeader">login</h2>
-                            <div className="login firstone">username</div>
-                            <input className="text-login" type="text"value={usernameInlog}
-                                   onChange={(event) => setusernameInlog(event.target.value)}/>
-                            <div className="login">wachtwoord</div>
-                            <input className="text-login" type="password"value={passwordInlog}
-                                   onChange={(event) => setpasswordInlog(event.target.value)}/><br/>
-                            <button className="btn" onClick={handleInlog}>comfirm</button><br/>
-                            <Link to="/vergeten?">wachtwoord vergeten?</Link>
-                        </div>
-                        <div className="col-1-of-2">
-                            <a href="#index.html" className="popup_close">&times;</a>
-                            <h2 className="loginHeader">create an account</h2>
-                            <div className="create">username</div>
-                            <input className="text-username" type="text"value={username}
-                                   onChange={(event) => setUsername(event.target.value)}/>
-                            <div className="create">email</div>
-                            <input className="text-username" type="email"value={email}
-                                   onChange={(event) => setemail(event.target.value)}/>
-                            <div className="create">date of birth</div>
-                            <input className="text-username" type="date"value={birthdate}
-                                   onChange={(event) => setbirthdate(event.target.value)}/>
-                            <div className="create">password</div>
-                            <input className="text-username" type="password"value={password}
-                                   onChange={(event) => setpassword(event.target.value)}/>
-                            <div className="create">confirm password</div>
-                            <input className="text-username" type="password"value={password}
-                                   onChange={(event) => setpassword(event.target.value)}/>
-                            <br/>
-                            <button className="btn" onClick={handleSubmit}>confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 }

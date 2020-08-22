@@ -8,6 +8,7 @@ import {
 import {
     Accountpage,
     AlligatorAndCrocodilepage,
+    Loginpage,
     ConstrictionSnakespage,
     Forumpage,
     Homepage,
@@ -28,6 +29,9 @@ function App() {
                     </Route>
                     <Route path="/alligatorAndCrocodilepage">
                         <AlligatorAndCrocodilepage />
+                    </Route>
+                    <Route path="/loginpage">
+                        <Loginpage />
                     </Route>
                     <Route path="/constrictionSnakespage">
                         <ConstrictionSnakespage />

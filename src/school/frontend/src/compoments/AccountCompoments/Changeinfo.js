@@ -8,7 +8,7 @@ const Changeinfo = () => {
     const [animalPicture, setAnimalPicture] = useState()
     const base64 = btoa(animalPicture)
     const handleSubmit = async (event) => {
-        event.preventDefault() // om te voorkomen dat de pagina ververst
+        event.preventDefault()
         try {
             const result = await axios.post('/api/animalinfo', {
                 species: animalSpecies,
@@ -19,6 +19,7 @@ const Changeinfo = () => {
         } catch (error) {
             console.error(error);
         }
+
     }
 
     return (

@@ -3,7 +3,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 html {
   font-size: 62.5%; }
@@ -209,39 +209,15 @@ p {
     transform: scale(0.8); }
 
 .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.achtergrondkleur {
   height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 2500;
-  opacity: 0;
-  visibility: hidden;
-  transition: all .3s; }
-  .popup:target {
-    opacity: 1;
-    visibility: visible; }
-  .popup_close:link, .popup_close:visited {
-    color: #000000;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 3rem;
-    text-decoration: none;
-    display: inline-block; }
-  .popup_close:hover {
-    color: #ff9900; }
-  .popup_content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 75%;
-    height: 75%;
-    background-image: linear-gradient(to right, rgba(235, 132, 132, 0.75), rgba(24, 73, 138, 0.75));
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  background-image: linear-gradient(to right, rgba(235, 132, 132, 0.75), rgba(24, 73, 138, 0.75)); }
 
 .loginHeader {
   text-transform: uppercase;
@@ -704,8 +680,9 @@ html, body {
   color: #ff9900;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 40rem;
   background-image: linear-gradient(120deg, #bb6240 0%, #c44d1f 50%, #fff 50%);
-  background-size: 200%;
+  background-size: 220%;
   transition: all .5s; }
 
 .navigation_link:hover, .navigation_link:active {

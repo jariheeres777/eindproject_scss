@@ -1,6 +1,4 @@
-# Project exclude paths
-/node_modules/
-/out/
+HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
