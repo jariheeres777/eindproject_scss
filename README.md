@@ -22,7 +22,7 @@ Deze applicatie is gemaakt met :
 
 -Java script
 
--REACT()
+-REACT
 
 -Back-end:
 
