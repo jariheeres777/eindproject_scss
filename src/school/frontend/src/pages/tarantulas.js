@@ -21,7 +21,7 @@ const Tarantulaspage = () => {
                     and have Urticating hairs so there less likely to bite first.
                     its recommended to not handle tarantula's especially 'old worlds' because these are very defensive"
                           foto1={foto12} classfoto1='composition_photo  composition_photo--p12'/>
-            <Sectionspecies url='/api/animalinfo/tarantulas'/>
+            <Sectionspecies />
             <Footer/>
         </div>
     );

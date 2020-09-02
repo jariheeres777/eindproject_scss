@@ -22,7 +22,7 @@ const AlligatorAndCrocodilepage = () => {
                     this section is only for expert keepers that are well aware of the risks."
                           foto1={foto10} classfoto1='composition_photo  composition_photo--p10'/>
             <Sectionspecies />
-            <Footer url='/api/animalinfo/alligatorandCrocodiles'/>
+            <Footer url='http://localhost:8080/api/animalinfo/1'/>
         </div>
     );
 };

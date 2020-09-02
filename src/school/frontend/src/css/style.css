@@ -222,14 +222,14 @@ p {
 .loginHeader {
   text-transform: uppercase;
   margin-top: 10rem;
-  color: #000000; }
+  color: #ff9900; }
 
 .create {
-  color: #ff9900;
+  color: #000000;
   margin-top: 3rem; }
 
 .login {
-  color: #ff9900; }
+  color: #000000; }
 
 .firstone {
   padding-top: 10rem; }

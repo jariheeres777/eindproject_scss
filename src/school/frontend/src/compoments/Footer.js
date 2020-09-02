@@ -30,7 +30,8 @@ const footer = () => {
             </div>
             <div className="row col-1-of-2">
                 <p className="footer_copyright">
-                    built by <Link to="" className="footer_link">jariheeres</Link>
+                    built by <a href="https://nl.linkedin.com/in/jari-heeres-94275a1b3"
+                                   rel="noopener noreferrer" target="_blank" className="footer_link">jariheeres</a>
                 </p>
             </div>
         </div>

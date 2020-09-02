@@ -24,7 +24,7 @@ const Tortoiseandturtlepage = () => {
                     so feel free to check them out in this section."
                           foto1={foto12} classfoto1='composition_photo  composition_photo--p12'/>
 
-            <Sectionspecies url='/api/animalinfo/tortoiseandturtle'/>
+            <Sectionspecies url='http://localhost:8080/api/animalinfo/1'/>
             <Footer/>
         </div>
     );

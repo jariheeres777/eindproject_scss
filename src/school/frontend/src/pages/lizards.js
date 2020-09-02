@@ -22,7 +22,7 @@ const Lizardspage = () => {
                     there is something for everyone here from small lizards like geckos to bigger
                     animals like teju's."
                           foto1={foto11} classfoto1='composition_photo  composition_photo--p11'/>
-            <Sectionspecies url='/api/animalinfo/lizards'/>
+            <Sectionspecies url='http://localhost:8080/api/animalinfo/1'/>
 
             <Footer/>
         </div>

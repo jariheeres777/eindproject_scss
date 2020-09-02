@@ -24,7 +24,7 @@ const ConstrictionSnakespage = () => {
                     there also allot for more experians keepers.
                     so if your here and you want a snake pet your at the right place.."
                           foto1={foto11} classfoto1='composition_photo  composition_photo--p11'/>
-            <Sectionspecies url= '/api/animalinfo/constrictionSnakes'/>
+            <Sectionspecies species="constrictionSnakes"/>
             <Footer/>
         </div>
     );

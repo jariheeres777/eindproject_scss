@@ -22,7 +22,7 @@ const Venomoussnakespage = () => {
                     antivenom isn’t a guarantee for you to survive the bite of a venomous snake.
                     always handle them with that in mind."
                           foto1={foto12} classfoto1='composition_photo  composition_photo--p12'/>
-            <Sectionspecies url="'/api/animalinfo/venomoussnakes'"/>
+            <Sectionspecies url="http://localhost:8080/api/animalinfo/1"/>
             <Footer/>
         </div>
     );

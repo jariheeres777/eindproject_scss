@@ -3,6 +3,12 @@ import {Link} from 'react-router-dom';
 
 
 const Nav = () => {
+    function handleClick(event) {
+        event.preventDefault();
+        alert('your logout');
+        localStorage.clear();
+        window.location= 'http://localhost:3000/'
+    }
     return (
         <div>
             <input type="checkbox" className="navigation_checkbox" id="navi-toggle"/>
@@ -14,10 +20,10 @@ const Nav = () => {
                 <ul className="navigation_list">
                     <li className="navigation_item"><a href="/" className="navigation_link">Home</a></li>
                     {/*zorgt er voor dat je inlog knop niet ziet als je niet ingelogd bent*/}
-                    {sessionStorage.token === undefined &&
+                    {localStorage.token === undefined &&
                     <li className="navigation_item"><a href="/loginpage" className="navigation_link">login</a></li>}
                     {/*zorgt er voor dat je dit alleen ziet als je ingelogd bent*/}
-                    {sessionStorage.token !== undefined &&
+                    {localStorage.token !== undefined &&
                     <li className="navigation_item"><Link to="/accountpage" className="navigation_link">account</Link>
                     </li>}
 
@@ -39,6 +45,10 @@ const Nav = () => {
                                                           className="navigation_link">Venomous-Snakes</Link></li>
                     <li className="navigation_item"><Link to="/tarantulaspage"
                                                           className="navigation_link">tarantula's</Link></li>
+
+                    {localStorage.token !== undefined &&
+                    <li className="navigation_item" onClick={handleClick}><Link to="/accountpage" className="navigation_link">logout</Link>
+                    </li>}
                 </ul>
             </nav>
         </div>

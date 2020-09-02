@@ -18,12 +18,11 @@ const pages = {
 }
 
 function Accountpage() {
-    const [activepage, setActivepage] = React.useState(pages.changeInfo)
-
+    const [activepage, setActivepage] = React.useState()
     function handleClick(event) {
         event.preventDefault();
         alert('your logout');
-        sessionStorage.clear();
+        localStorage.clear();
         window.location= 'http://localhost:3000/'
     }
 
@@ -45,7 +44,7 @@ function Accountpage() {
                 <button onClick={() => setActivepage(pages.bidInfo)}>Bid</button>
                 <button onClick={() => setActivepage(pages.savedAds)}>Saved ads</button>
                 <button onClick={() => setActivepage(pages.manageAds)}>Manage ads</button>
-                {sessionStorage.roles === "ROLE_USER,ROLE_MODERATOR,ROLE_ADMIN" && <button onClick={() => setActivepage(pages.changeInfo)}>Change info</button>}
+                {localStorage.roles === "ROLE_ADMIN" && <button onClick={() => setActivepage(pages.changeInfo)}>Change info</button>}
                 <button onClick={handleClick}>logout</button>
             </div>
         </div>
