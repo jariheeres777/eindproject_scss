@@ -77,6 +77,11 @@ body {
 .color-orange{
   color: $color-primary;
 }
+.color-red{
+  color: $color-primary-red;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
 p {
   font-size: 3rem;
   font-weight: 700;
@@ -86,3 +91,4 @@ p {
 .gate-to-forum {
   padding-bottom: 0;
 }
+

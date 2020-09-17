@@ -18,7 +18,7 @@ const pages = {
 }
 
 function Accountpage() {
-    const [activepage, setActivepage] = React.useState()
+    const [activepage, setActivepage] = React.useState(pages.offers)
     function handleClick(event) {
         event.preventDefault();
         alert('your logout');

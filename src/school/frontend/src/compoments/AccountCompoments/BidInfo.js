@@ -2,9 +2,17 @@ import React from "react";
 
 
 const BidInfo = () => {
+
+
+
+
+
+
+
+
     return(
         <div>
-            oke
+
         </div>
     )
 }

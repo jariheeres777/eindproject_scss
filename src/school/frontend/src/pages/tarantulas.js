@@ -5,7 +5,7 @@ import Sectionabout from "../compoments/Sectionabout";
 import Footer from "../compoments/Footer";
 import foto12 from "../assets/Tarantulafotocompo.jpg";
 import Sectionspecies from "../compoments/Sectionspecies";
-
+import speciesConstants from '../constants/speciesConstants';
 const Tarantulaspage = () => {
 
     return (
@@ -21,7 +21,7 @@ const Tarantulaspage = () => {
                     and have Urticating hairs so there less likely to bite first.
                     its recommended to not handle tarantula's especially 'old worlds' because these are very defensive"
                           foto1={foto12} classfoto1='composition_photo  composition_photo--p12'/>
-            <Sectionspecies />
+            <Sectionspecies species={speciesConstants.tarantula}/>
             <Footer/>
         </div>
     );

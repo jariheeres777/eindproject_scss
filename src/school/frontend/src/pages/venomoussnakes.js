@@ -6,7 +6,7 @@ import Sectionabout from "../compoments/Sectionabout";
 import Footer from "../compoments/Footer";
 import foto12 from "../assets/cerastes.jpg";
 import Sectionspecies from "../compoments/Sectionspecies";
-
+import speciesConstants from '../constants/speciesConstants';
 const Venomoussnakespage = () => {
     return (
         <div>
@@ -22,7 +22,7 @@ const Venomoussnakespage = () => {
                     antivenom isn’t a guarantee for you to survive the bite of a venomous snake.
                     always handle them with that in mind."
                           foto1={foto12} classfoto1='composition_photo  composition_photo--p12'/>
-            <Sectionspecies url="http://localhost:8080/api/animalinfo/1"/>
+            <Sectionspecies species={speciesConstants.venom}/>
             <Footer/>
         </div>
     );

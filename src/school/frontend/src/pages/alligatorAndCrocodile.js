@@ -5,6 +5,7 @@ import Sectionabout from "../compoments/Sectionabout";
 import Footer from "../compoments/Footer";
 import foto10 from "../assets/aligator - crocodile.jpg";
 import Sectionspecies from "../compoments/Sectionspecies"
+import speciesConstants from '../constants/speciesConstants';
 
 const AlligatorAndCrocodilepage = () => {
     return (
@@ -21,8 +22,8 @@ const AlligatorAndCrocodilepage = () => {
                     The alligator is not as aggressive as the crocodile, but is still very dangerous. Getting either one of those species is a bad idea.
                     this section is only for expert keepers that are well aware of the risks."
                           foto1={foto10} classfoto1='composition_photo  composition_photo--p10'/>
-            <Sectionspecies />
-            <Footer url='http://localhost:8080/api/animalinfo/1'/>
+            <Sectionspecies species={speciesConstants.alligator}/>
+            <Footer/>
         </div>
     );
 };

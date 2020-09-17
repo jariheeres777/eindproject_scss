@@ -5,6 +5,7 @@ import Sectionabout from "../compoments/Sectionabout";
 import Footer from "../compoments/Footer";
 import foto11 from "../assets/komodovaraan.jpg";
 import Sectionspecies from "../compoments/Sectionspecies";
+import speciesConstants from '../constants/speciesConstants';
 
 const Lizardspage = () => {
     return (
@@ -12,7 +13,7 @@ const Lizardspage = () => {
             <Nav/>
             <Header className='header lizardsPage' name="lizard's" line="all you need to know">
             </Header>
-            <Sectionabout titletext1="what are they?" headertext="some info about lizard's" textone="t
+            <Sectionabout titletext1="what are they?" headertext="some info about lizard's" textone="
                     Lizards are a widespread group of squamate reptiles, with over 6,000 species,
                     ranging across all continents except Antarctica, as well as most oceanic island chains.
                     The group is paraphyletic as it excludes the snakes and Amphisbaenia.
@@ -22,7 +23,7 @@ const Lizardspage = () => {
                     there is something for everyone here from small lizards like geckos to bigger
                     animals like teju's."
                           foto1={foto11} classfoto1='composition_photo  composition_photo--p11'/>
-            <Sectionspecies url='http://localhost:8080/api/animalinfo/1'/>
+            <Sectionspecies species={speciesConstants.lizard}/>
 
             <Footer/>
         </div>

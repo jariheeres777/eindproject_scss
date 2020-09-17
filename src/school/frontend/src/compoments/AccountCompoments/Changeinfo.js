@@ -1,64 +1,44 @@
 import React, {useState} from "react";
-import axios from "axios"
-
-
+import speciesConstants from '../../constants/speciesConstants';
+import infoAnimalsService from "../../service/infoAnimalsService";
 
 const Changeinfo = () => {
-    function imgToBase64(img) {
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = img.width;
-        canvas.height = img.height;
+    const [animalSpecies, setAnimalSpecies] = useState(null);
+    const [animalName, setAnimalName] = useState(null);
+    const [animalInformation, setAnimalInformation] = useState(null)
+    const [animalPicture, setAnimalPicture] = useState(null)
 
-        // I think this won't work inside the function from the console
-        img.crossOrigin = 'anonymous';
-
-        ctx.drawImage(img, 0, 0);
-        console.log(canvas)
-        return canvas.toDataURL();
-    }
-
-    const [animalSpecies, setAnimalSpecies] = useState();
-    const [animalName, setAnimalName] = useState();
-    const [animalInformation, setAnimalInformation] = useState()
-    const [animalPicture, setAnimalPicture] = useState()
-
-    const handleSubmit = async (event) => {
-
+    const handleSubmit = (event) => {
         event.preventDefault()
-        try {
-            const result = await axios.post('/api/animalinfo', {
-                species: animalSpecies,
-                animal: animalName,
-                info: animalInformation,
-                picture:animalPicture
-            }).then(function (result) {
-                alert("info is saved");})
-            document.getElementById('name').value = ''
-            document.getElementById('img').value = ''
-            document.getElementById('info').value = ''
-            document.getElementById('format').value = '-- select an option --'
-        } catch (error) {
-            console.error(error);
-        }
-
+        const result = infoAnimalsService.setanimalinfo(animalSpecies, animalName, animalInformation, animalPicture)
+        alert("info is saved")
+        setAnimalSpecies(null)
+        setAnimalName(null)
+        setAnimalInformation(null)
+        setAnimalPicture(null)
+        // if else for result
     }
 
-    function handleFiles(e) {
-        var input = document.getElementById('img');
-        var canvas = document.createElement('canvas');
-        var ctx = canvas.getContext('2d');
-        var img = new Image();
+    const handleFiles = async (event) => {
+        const file = event.target.files[0]
+        const base64 = await imageconvert(file)
+        setAnimalPicture(base64)
+    }
+    const imageconvert = (file) => {
 
-        img.onload = function() {
-            ctx.drawImage(img, 0, 0);
+        return new Promise((resolve, reject) => {
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(file);
 
-            var animalPicture = canvas.toDataURL();
-            console.log(animalPicture)
-            setAnimalPicture(animalPicture)
-        }
+            fileReader.onload = (() => {
+                resolve(fileReader.result)
+            });
 
-        img.src = URL.createObjectURL(e.target.files[0]);
+            fileReader.onerror = ((error) => {
+                reject(error)
+            })
+
+        })
     }
 
     return (
@@ -68,12 +48,12 @@ const Changeinfo = () => {
                     <select className="select-css" id="format" value={animalSpecies}
                             onChange={(event) => setAnimalSpecies(event.target.value)}>
                         <option disabled selected value="-- select an option --">-- select an option --</option>
-                        <option value="alligatorandCrocodiles">alligator and Crocodile's</option>
-                        <option value="constrictionSnakes">constriction Snakes</option>
-                        <option value="lizards">lizards</option>
-                        <option value="tarantulas">tarantulas</option>
-                        <option value="tortoiseandturtle">tortoise and turtle</option>
-                        <option value="venomoussnakes">venomous Snakes</option>
+                        <option value={speciesConstants.alligator}>alligator and Crocodile's</option>
+                        <option value={speciesConstants.constrictorSnake}>constriction Snakes</option>
+                        <option value={speciesConstants.lizard}>lizards</option>
+                        <option value={speciesConstants.tarantula}>tarantulas</option>
+                        <option value={speciesConstants.turtle}>tortoise and turtle</option>
+                        <option value={speciesConstants.venom}>venomous Snakes</option>
                     </select><br/><br/>
                 </div>
             </label>
@@ -93,7 +73,12 @@ const Changeinfo = () => {
                           value={animalInformation}
                           onChange={(event) => setAnimalInformation(event.target.value)}/>
             </label><br/>
-            <button className="btn" onClick={handleSubmit}>confirm</button>
+            {animalInformation === null && <label className="color-red">*all fields need to be filled in</label>}
+            <br/>
+            <button className="btn"
+                    disabled={animalInformation === null || animalName === null || animalPicture === null || animalSpecies === null || animalInformation === undefined || animalName === undefined || animalPicture === undefined || animalSpecies === undefined}
+                    onClick={handleSubmit}>confirm
+            </button>
         </div>
     );
 }
