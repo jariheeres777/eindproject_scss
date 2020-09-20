@@ -36,3 +36,6 @@ Deze applicatie is gemaakt met :
 
 ind instalatie staat de instalatie handleiding voor de front-end deze staat ook bij de back-end maar dan voor de back-end
 
+voor de fron-tend repo van git: https://github.com/jariheeres777/eindproject_scss
+voor de backend repo van git: https://github.com/jariheeres777/security
+
