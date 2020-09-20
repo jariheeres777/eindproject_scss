@@ -34,6 +34,5 @@ Deze applicatie is gemaakt met :
 
 -postgreSQL
 
-Alle documentaties is te vinden in de map “documentaties”
-Hier staat het Analyse en onderzoek , Functioneel ontwerp , Technisch ontwerp en het verantwoordingsdocument in.
+ind instalatie staat de instalatie handleiding voor de front-end deze staat ook bij de back-end maar dan voor de back-end
 

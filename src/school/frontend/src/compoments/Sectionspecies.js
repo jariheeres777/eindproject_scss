@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import InfoAnimalsService from '../service/infoAnimalsService'
 import axios from "axios";
 import AdsService from "../service/adsService";
+import bidService from "../service/bidService";
 
 function Sectionspecies(props) {
     //voor het dier
@@ -16,8 +17,9 @@ function Sectionspecies(props) {
     const [activePickedAds, setActivePickedAds] = useState(null)
     const [adsinfo, setadsinfo] = useState(null)
     const [activeAds, setActiveAds] = useState(null);
-    // const foto = atob(animalInfo.picture)
-    // let newOption = new Option('Option Text', 'Option Value');
+    const [username,setusername] = useState(null)
+    const [email,setEmail] = useState(null)
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -52,7 +54,11 @@ function Sectionspecies(props) {
                     return item.infofromid === activeInfo.animalID
                 }))
                 let retrievedObject = localStorage.getItem('ID');
+                let retrievedObject2 = localStorage.getItem('username');
+                let retrievedObject3 = localStorage.getItem('email');
                 setUserID(retrievedObject)
+                setusername(retrievedObject2)
+                setEmail(retrievedObject3)
                 setActivePickedAds(null)
 
             } catch (error) {
@@ -86,7 +92,6 @@ function Sectionspecies(props) {
             console.error(error);
         }
     }
-    // console.log(activePickedAds.adID)
 
     return (
         <div className="u-center-text   section-animals">
@@ -115,7 +120,7 @@ function Sectionspecies(props) {
             )}
             </>
             <>
-                {adsinfo !== null  && (
+                {adsinfo !== null  &&  (
                     <>
                         <select className="select-css" value={activeAds}
                                 onChange={(event) => setActiveAds(event.target.value)}>

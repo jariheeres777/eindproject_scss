@@ -1,55 +1,56 @@
 
-## Front-end Setup
-The front-end is setup with the use of npx create-react-app.<br />
-The npx package installer is used because of the pre-configured settings and files, which enables a easy and fast setup of the front-end environment. 
+## Front-end installatie
+De front-end wordt opgezet met behulp van npx create-react-app. <br />
+Het npx-pakketinstallatieprogramma wordt gebruikt vanwege de vooraf geconfigureerde instellingen en bestanden, wat een gemakkelijke en snelle installatie van de front-endomgeving mogelijk maakt.
 ```shell script
 npx create-react-app client
 cd client
 ```
 
-Front-end startup is accomplished using following command:
+Het opstarten van de front-end wordt bereikt met de volgende opdracht:
 ```shell script
 npm start
 ```
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Voert de app uit in de ontwikkelingsmodus. <br />
+Open [http: // localhost: 3000] (http: // localhost: 3000) om het in de browser te bekijken.
 
-The page will "hot-reload", this means the application will reload after changes have taken place.<br />
-In case of any lint errors, these will show in the console.
+De pagina wordt "hot-reload", dit betekent dat de applicatie opnieuw wordt geladen nadat er wijzigingen hebben plaatsgevonden. <br />
+In het geval van fouten, worden deze weergegeven in de console.
 ```shell script
 npm test
 ```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+Start de testrunner in de interactieve horlogemodus. <br />
+Zie de sectie over [tests uitvoeren] (https://facebook.github.io/create-react-app/docs/running-tests) voor meer informatie.
 ```shell script
 npm run build
 ```
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bouwt de app voor productie naar de map 'build'. <br />
+Het bundelt React correct in de productiemodus en optimaliseert de build voor de beste prestaties.
 
-The build is minified, and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+De build is verkleind en de bestandsnamen bevatten de hashes. <br />
+Uw app is klaar om te worden ingezet!
 
-## For Node Package Manager ````npm````
-[Press here](https://www.npmjs.com/)
+## Voor Node Package Manager `` `` npm ''
+[Druk hier] (https://www.npmjs.com/)
 
 
-## Front-End Dependencies Installations
+## Front-end afhankelijkheden installaties
 
-### [Axios](https://www.npmjs.com/package/axios)  [![npm version](https://img.shields.io/npm/v/axios.svg)](https://www.npmjs.com/package/axios)
+### [Axios] (https://www.npmjs.com/package/axios) [! [Npm-versie] (https://img.shields.io/npm/v/axios.svg)] (https: //www.npmjs.com/package/axios)
 
-Within the application, Axios is being used as the primary promise based HTTP client for the browser.<br />
-Fetch was considered, however Axios supports older browsers (Fetch needs a polyfill).<br />
-Also during development we've found out that fetch, in some cases, require longer and "more difficult" code.
+Binnen de applicatie wordt Axios gebruikt als de primaire, op belofte gebaseerde HTTP-client voor de browser. <br />
+Fetch werd overwogen, maar Axios ondersteunt oudere browsers (Fetch heeft een polyfill nodig). <br />
+Ook tijdens de ontwikkeling hebben we ontdekt dat fetch in sommige gevallen langere en "moeilijkere" code vereist.
 ```shell script
 npm install axios
 ```
 
-## Front-end Infrastructure
+## Front-end infrastructuur
 
-Here below the front-end file infrastructure tree is illustrated.<br />
-The files, such as components, modules, services etc. have been splitted to provide a clear overview and accommodate a fast navigation through the files.
+Hieronder wordt de front-end bestandsinfrastructuurboom geïllustreerd. <br />
+De bestanden, zoals componenten, modules, services etc. zijn opgesplitst om een ​​duidelijk overzicht te bieden en een snelle navigatie door de bestanden mogelijk te maken.
 ```
 client\src
 │   App.js
@@ -83,8 +84,6 @@ client\src
 ├───constants
 │       http-common.js
 │       speciesConstants.js
-│       
-│
 ├───css
 |     style.css
 │       

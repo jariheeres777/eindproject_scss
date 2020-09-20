@@ -18,7 +18,7 @@ const pages = {
 }
 
 function Accountpage() {
-    const [activepage, setActivepage] = React.useState(pages.offers)
+    const [activepage, setActivepage] = React.useState(null)
     function handleClick(event) {
         event.preventDefault();
         alert('your logout');
@@ -30,22 +30,22 @@ function Accountpage() {
     return (
         <div>
             <Nav/>
-            {activepage === pages.privateMessage && <Privatemessege/>}
+            {/*{activepage === pages.privateMessage && <Privatemessege/>}*/}
             {activepage === pages.offers && <Offersinfo/>}
-            {activepage === pages.bidInfo && <Bidinfo/>}
-            {activepage === pages.savedAds && <Savedads/>}
+            {/*{activepage === pages.bidInfo && <Bidinfo/>}*/}
+            {/*{activepage === pages.savedAds && <Savedads/>}*/}
             {activepage === pages.manageAds && <Manageads/>}
             {activepage === pages.changeInfo && <Changeinfo/>}
             <div className="sidebar">
                 <h1>Account</h1>
-                <Link to="/" style={{textDecoration: 'none'}}><button>Home</button></Link>
-                <button onClick={() => setActivepage(pages.privateMessage)}>Private message</button>
-                <button onClick={() => setActivepage(pages.offers)}>Offers</button>
-                <button onClick={() => setActivepage(pages.bidInfo)}>Bid</button>
-                <button onClick={() => setActivepage(pages.savedAds)}>Saved ads</button>
-                <button onClick={() => setActivepage(pages.manageAds)}>Manage ads</button>
+                {localStorage.roles !== undefined &&<Link to="/" style={{textDecoration: 'none'}}><button>Home</button></Link>}
+                {/*<button onClick={() => setActivepage(pages.privateMessage)}>Private message</button>*/}
+                {localStorage.roles !== undefined &&<button onClick={() => setActivepage(pages.offers)}>Offers</button>}
+                {/*<button onClick={() => setActivepage(pages.bidInfo)}>Bid</button>*/}
+                {/*<button onClick={() => setActivepage(pages.savedAds)}>Saved ads</button>*/}
+                {localStorage.roles !== undefined &&<button onClick={() => setActivepage(pages.manageAds)}>Manage ads</button>}
                 {localStorage.roles === "ROLE_ADMIN" && <button onClick={() => setActivepage(pages.changeInfo)}>Change info</button>}
-                <button onClick={handleClick}>logout</button>
+                {localStorage.roles !== undefined &&<button onClick={handleClick}>logout</button>}
             </div>
         </div>
     );

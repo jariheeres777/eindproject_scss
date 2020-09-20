@@ -61,23 +61,23 @@ const Homepage = () => {
                     <Link to="/tarantulaspage"><img src={foto9} alt="photo9"
                                                     className="composition_photo-two composition_photo--p9"/></Link>
                 </div>
-            </section>
-            <section className="section-about section-two">
-                <div className="u-center-text u-margine-bottom-big">
-                    <h2 className="heading-secondary forum">
-                        the forum
-                    </h2>
-                </div>
-                <div className="gate-to-forum u-center-text color-orange">
-                    <p>the forum is the place were you can share your thoughts and experiences with like-minded keepers and hobbyists
-                    </p>
-                </div>
-                <div className="gate-to-forum u-center-text">
-                    <Link to="/forumpage">
-                        <img src={foto10} alt="photo10" className="composition_photo-three "/>
-                    </Link>
-                </div>
-            </section>
+            </section><br/><br/><br/><br/><br/>
+            {/*<section className="section-about section-two">*/}
+            {/*    <div className="u-center-text u-margine-bottom-big">*/}
+            {/*        <h2 className="heading-secondary forum">*/}
+            {/*            the forum*/}
+            {/*        </h2>*/}
+            {/*    </div>*/}
+            {/*    <div className="gate-to-forum u-center-text color-orange">*/}
+            {/*        <p>the forum is the place were you can share your thoughts and experiences with like-minded keepers and hobbyists*/}
+            {/*        </p>*/}
+            {/*    </div>*/}
+            {/*    <div className="gate-to-forum u-center-text">*/}
+            {/*        <Link to="/forumpage">*/}
+            {/*            <img src={foto10} alt="photo10" className="composition_photo-three "/>*/}
+            {/*        </Link>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
             <Footer/>
         </div>
     );

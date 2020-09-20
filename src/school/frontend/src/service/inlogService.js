@@ -10,7 +10,7 @@ const inloggen = async (
             password)
 
     } catch (error) {
-       console.log(error)
+        alert("username or password is incorrect")
     }
 
 }

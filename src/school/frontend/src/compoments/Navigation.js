@@ -27,8 +27,8 @@ const Nav = () => {
                     <li className="navigation_item"><Link to="/accountpage" className="navigation_link">account</Link>
                     </li>}
 
-                    <li className="navigation_item"><Link to="/forumpage" className="navigation_link">forum</Link>
-                    </li>
+                    {/*<li className="navigation_item"><Link to="/forumpage" className="navigation_link">forum</Link>*/}
+                    {/*</li>*/}
                     <li className="navigation_item"><Link to="/lizardspage"
                                                           className="navigation_link">lizard's</Link>
                     </li>

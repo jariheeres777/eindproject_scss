@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 import speciesConstants from "../../constants/speciesConstants";
-import axios from "axios";
 import InfoAnimalsService from "../../service/infoAnimalsService";
-
+import adsService from "../../service/adsService";
 
 const ManageAds = () => {
     // voor de select box
@@ -40,31 +39,18 @@ const ManageAds = () => {
             }))
         }
     }, [animalSpecies]);
-    const handleSubmit = async (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault()
-        try {
-            const result = await axios.post('/api/advertisement', {
-                adtext: animalInformation,
-                pricead: adPrice,
-                adPictures: adPicture,
-                adname: adName,
-                infofromid: animal,
-                usernamebyid: userID,
-            }).then(function (result) {
-                alert("info is saved");
-                setAdPicture(null)
-                setAdname(null)
-                setAdPrice(null)
-                setAnimalInformation(null)
-                setFiltered(null)
-                setAnimal(null)
-                setAnimalSpecies(null)
-                document.getElementById('format').value = '-- select an option --'
-            })
-
-        } catch (error) {
-            console.error(error);
-        }
+        const result = adsService.setads(animalInformation,adPrice,adName,animal,userID)
+        alert("info is saved");
+        setAdPicture(null)
+        setAdname(null)
+        setAdPrice(null)
+        setAnimalInformation(null)
+        setFiltered(null)
+        setAnimal(null)
+        setAnimalSpecies(null)
+        document.getElementById('format').value = '-- select an option --'
     }
 
     const handleFiles = async (event) => {
